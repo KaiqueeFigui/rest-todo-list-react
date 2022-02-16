@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-    margin: 15px 15px 0px 15px;
+    margin: 15px 15px 15px 15px;
     ul{
         display: flex;
         margin-top: 15px;
@@ -23,6 +23,9 @@ export const BotaoMenu = styled.a`
     padding: 10px;
     border-radius: 20px;
     font-weight: 500;
+
+    color: ${props => props.ativo ? "#2F3437" : "inherit"};
+    background-color: ${props => props.ativo ? "#EBEBEB" : "inherit"};
 
     :visited{
         color: inherit

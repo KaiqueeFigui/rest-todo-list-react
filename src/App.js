@@ -1,9 +1,12 @@
-import { Header } from "./Components/Header/Header";
+import React from "react";
+import { AppRoutes } from "./routes";
+import { GlobalStyle } from './globals/Global';
 
 function App() {
   return (
     <>
-      <Header />
+      <GlobalStyle />
+      <AppRoutes />
     </>
   );
 }

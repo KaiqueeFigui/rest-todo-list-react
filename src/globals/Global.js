@@ -8,6 +8,8 @@ export const GlobalStyle = createGlobalStyle`
         color: ${fontColor};
         background-color: ${backgroundColor};
         font-family: 'Poppins', sans-serif;
+        font-weight: 200;
+        margin: 0px 15px 0px 15px;
     }
 
     *{
