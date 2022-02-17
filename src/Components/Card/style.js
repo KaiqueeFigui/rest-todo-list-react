@@ -39,3 +39,10 @@ export const BotaoContainer = styled.div`
     margin-top: 15px;
     display: flex;
 `
+
+export const TagContainer = styled.div`
+    p {
+        font-size: 0%.7rem;
+        opacity: 70%;
+    }
+`

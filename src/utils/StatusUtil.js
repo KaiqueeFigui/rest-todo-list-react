@@ -1,3 +1,9 @@
+export const statusConstantes = {
+    "a_fazer": ['A_FAZER', 'A Fazer'],
+    "em_progresso": ['EM_PROGRESSO', 'Em Progresso'],
+    "feito": ['FEITO', 'Feito']
+}
+
 export function geraCorPartindoDoStatus(status){
     if (status.toLowerCase() === "a fazer") {
         return '#f94f4f'
@@ -8,8 +14,12 @@ export function geraCorPartindoDoStatus(status){
     }
 }
 
-export const statusConstantes = {
-    "a_fazer": ['A_FAZER', 'A Fazer'],
-    "em_progresso": ['EM_PROGRESSO', 'Em Progresso'],
-    "feito": ['FEITO', 'Feito']
+export function converteStatusEnum(status){
+    if (status === statusConstantes.a_fazer[0]){
+        return statusConstantes.a_fazer[1]
+    } else if (status === statusConstantes.em_progresso[0]) {
+        return statusConstantes.em_progresso[1]
+    } else{
+        return statusConstantes.feito[1]
+    }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { Excluir, Editar } from "../Botao/style"
-import { CardStyle, Status, Descricao, BotaoContainer } from "./style";
+import { CardStyle, Status, Descricao, BotaoContainer, TagContainer } from "./style";
 
 function redirect(id){
     window.location.href = "http://www.google.com";    
@@ -18,6 +18,7 @@ export function Card(props){
                 <Excluir>Excluir</Excluir>
                 <Editar>Editar</Editar>
             </BotaoContainer>
+            <TagContainer><p>{props.tag}</p></TagContainer>
         </CardStyle>
     )
 }

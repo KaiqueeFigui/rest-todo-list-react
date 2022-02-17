@@ -1,11 +1,11 @@
 import styled from "styled-components"
 
 export const Botao = styled.button`
-    font-size: 0.6rem;
+    font-size: 0.75rem;
     padding: 5px;
     border: none;
     border-radius: 2px;
-    margin: 5px 0 5px 0;
+    margin: 5px 5px 5px 0;
 
     opacity: 40%;
 
