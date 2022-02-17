@@ -3,7 +3,6 @@ import { Excluir, Editar } from "../Botao/style"
 import { CardStyle, Status, Descricao, BotaoContainer, TagContainer } from "./style";
 
 function redirect(id){
-    window.location.href = "http://www.google.com";    
 }
 
 export function Card(props){
