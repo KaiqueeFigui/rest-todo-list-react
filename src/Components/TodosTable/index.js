@@ -37,8 +37,9 @@ export function TodosTable(){
     async function getAllTodosPorStatus(status){
         if (status.toUpperCase() === "TODOS"){
             getAllTodos()
+            return
         }
-        
+
         let todosData = await getTodosPorStatus(status)
         if (!isStatusCodeValido(todosData.status)){
             console.log(todos.data.message)
@@ -68,7 +69,6 @@ export function TodosTable(){
             </div>
         </Container>
         <CardContainer>
-            Todos aqui:
             {todos?.map(todo => <Card key={todo.id} titulo={todo.nome} status={converteStatusEnum(todo.status)} descricao={todo.descricao} id={todo.id} tag={todo.tag} />)}
         </CardContainer>
         </div>
