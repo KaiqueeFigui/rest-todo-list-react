@@ -15,3 +15,29 @@ export const ButtonContainer = styled.ul`
         margin-right: 5px;
     }
 `
+
+export const StatusContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 3px;
+    width: max-content;
+    opacity: 85%;
+    font-weight: 600;
+    font-size: 0.8rem;
+    background-color: ${props => props.statusOf == "A FAZER" ? "#ff3a3a" : 
+                        props.statusOf == "EM PROGRESSO" ? "#9c58fc" :
+                        "#00e522"};
+`
+
+export const TagContainer = styled.div`
+    margin-top: 6px;
+    opacity: 80%;
+`
+
+export const DateContainer = styled.div`
+    margin-top: 12px;
+    font-size: 0.9rem;
+    opacity: 80%;
+`

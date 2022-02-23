@@ -7,7 +7,7 @@ export function TodosPage(){
         <div>
             <Header />
             <BodyContainer>
-                <Card title="titulo" description="description" createdAt="2022-02-22" status="A Fazer" finalDate="2022-03-22" tag="Node" />
+                <Card title="titulo" description="description" createdAt="2022-02-22" statusOf="FEITO" finalDate="2022-03-22" tag="Node" />
             </BodyContainer>
         </div>
     )
