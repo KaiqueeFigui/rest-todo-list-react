@@ -1,10 +1,13 @@
+import { BodyContainer } from "../components/BodyContainer/style";
 import { Header } from "../components/Header";
 
 export function LixeiraPage(){
     return (
         <div>
             <Header />
-            Lixeira
+            <BodyContainer>
+                Lixeira
+            </BodyContainer>
         </div>
     )
 }
