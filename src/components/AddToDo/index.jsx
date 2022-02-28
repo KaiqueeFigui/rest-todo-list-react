@@ -20,8 +20,9 @@ export function AddToDo({ update }){
     }
 
     function save(){
-        saveTodo(toDo)
-        update()
+        saveTodo(toDo).then(() => 
+            update()
+        )
     }
 
     return(

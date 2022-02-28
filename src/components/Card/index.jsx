@@ -1,12 +1,14 @@
 import { DeleteButton, EditButton } from "../Button/style";
 import { ButtonContainer, CardContainer, DateContainer, StatusContainer, TagContainer } from "./style";
+import { formatStatus } from "../../utils/status"
 import { deleteTodo } from "../../services/todoService";
 
 export function Card({ id, title, description, createdAt, statusOf, finalDate, tag, update }){
 
     function removeTodo(todoId){
-        deleteTodo(todoId)
-        update()
+        deleteTodo(todoId).then(() => 
+            update()
+        )
     }
 
     return(
@@ -14,7 +16,7 @@ export function Card({ id, title, description, createdAt, statusOf, finalDate, t
             <div>
                 <h1>{title}</h1>
                 <StatusContainer statusOf={statusOf}>
-                    <p>{statusOf}</p>
+                    <p>{formatStatus(statusOf)}</p>
                 </StatusContainer>
                 <p>{description}</p>
             </div>
