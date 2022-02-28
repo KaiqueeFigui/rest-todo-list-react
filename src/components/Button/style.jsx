@@ -17,6 +17,10 @@ const buttonsColors = {
     menu: {
         background: "#EBEBEB",
         font: "#252525"
+    },
+    toggle: {
+        background: "#04ff00",
+        font: "#252525"
     }
 }
 
@@ -49,4 +53,9 @@ export const EditButton = styled(Button)`
 export const MenuButton = styled(Button)`
     background-color: ${buttonsColors.menu.background};
     color: ${buttonsColors.menu.font};
+`
+
+export const ToggleButton = styled(Button)`
+    background-color: ${buttonsColors.toggle.background};
+    color: ${buttonsColors.toggle.font};
 `

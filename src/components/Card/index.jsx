@@ -1,7 +1,14 @@
 import { DeleteButton, EditButton } from "../Button/style";
 import { ButtonContainer, CardContainer, DateContainer, StatusContainer, TagContainer } from "./style";
+import { deleteTodo } from "../../services/todoService";
 
-export function Card({ title, description, createdAt, statusOf, finalDate, tag }){
+export function Card({ id, title, description, createdAt, statusOf, finalDate, tag, update }){
+
+    function removeTodo(todoId){
+        deleteTodo(todoId)
+        update()
+    }
+
     return(
         <CardContainer>
             <div>
@@ -11,14 +18,6 @@ export function Card({ title, description, createdAt, statusOf, finalDate, tag }
                 </StatusContainer>
                 <p>{description}</p>
             </div>
-            <ButtonContainer>
-                <li>
-                <DeleteButton to="">Excluir</DeleteButton>
-                </li>
-                <li>
-                <EditButton to="">Editar</EditButton>
-                </li>
-            </ButtonContainer>
             <DateContainer>
                 <p>criado em: {createdAt}</p>
                 <p>data esperada: {finalDate}</p>
@@ -26,6 +25,14 @@ export function Card({ title, description, createdAt, statusOf, finalDate, tag }
             <TagContainer>
             <p>tag: {tag}</p>
             </TagContainer>
+            <ButtonContainer>
+                <li>
+                <DeleteButton onClick={() => removeTodo(id)} to="">Excluir</DeleteButton>
+                </li>
+                <li>
+                <EditButton to="">Editar</EditButton>
+                </li>
+            </ButtonContainer>
         </CardContainer>
     )
 }
